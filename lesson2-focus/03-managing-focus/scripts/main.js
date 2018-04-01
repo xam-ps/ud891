@@ -16,8 +16,10 @@ page('/:slug', function(context) {
   // Add is-active class to new menu item and section using the URL slug
   var newMenuItem = document.querySelector('#menu [data-page='+slug+']');
   var newPage = document.querySelector('main [data-page='+slug+']');
+  var heading = newPage.querySelector('h2');
   newMenuItem.classList.add('is-active');
   newPage.classList.add('is-active');
+  heading.focus();
 
 });
 
